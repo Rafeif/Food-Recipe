@@ -1,0 +1,318 @@
+
+/* Base */
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color:rgb(37, 36, 36);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+h1 {
+  color: hsl(0, 0%, 28%);
+  font-size: 100px;
+  font-weight: bold;
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 {
+  padding: 64px;
+  background: linear-gradient(to right, hsl(0, 0%, 30%) 0, hsl(0, 0%, 100%) 10%, hsl(0, 0%, 30%) 20%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}
+.form-control {
+    position: relative;
+    margin: 15px 0 180px;
+    width: 100%;
+    margin: auto;
+  }
+  
+  .form-control input {
+    background-color: #000;
+    border: 0;
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 22px;
+    color: #fff;
+  }
+  .co{
+    background-color: #008bf8;
+    width: 250px;
+    height: 250px;
+    font-size: 1rem;
+    margin: auto;
+    text-align: center;
+    color: rebeccapurple;
+  }
+  .form-control input:focus,
+  .form-control input:valid {
+    outline: 0;
+    border-bottom-color: #add8e6;
+  }
+  
+  .form-control label {
+    position: absolute;
+    top: 5px;
+    left: 19px;
+    pointer-events: none;
+    padding-bottom: 20px;
+    /* color: yellow; */
+
+
+  }
+  
+  .form-control label span {
+    display: inline-block;
+    font-size: 25px;
+    min-width: 5px;
+    /* padding-top: 13px; */
+    color: rgb(248, 242, 242);
+    transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .form-control input:focus+label span,
+  .form-control input:valid+label span {
+    color: rgb(121, 118, 118);
+    transform: translateY(-40px);
+    font-size: 30px;
+  }
+  .searh-result{
+    width: 100%;
+    text-align: center;
+    margin-top: 0px;
+  }
+  .recipe-name input{
+    background-color: rgb(37, 36, 36);
+    color:#008bf8
+  }
+  /********************/
+
+  .card {
+    width: 100%;
+    height: 380px;
+    border-radius: 20px;
+    background: #141414;
+    position: relative;
+    padding: 1.8rem 1.8rem 3.5rem 1.8rem;
+    border: 2px solid #141414;
+    transition: 0.5s ease-out;
+    overflow:visible;
+    margin: 2rem 0rem;
+   }
+   
+   .card-details {
+    color: rgb(189, 179, 179);
+    height: fit-content;
+    gap: .5em;
+    display: grid;
+    place-content: center;
+    
+   }
+   
+   .card-button {
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 1rem;
+    border: none;
+    background-color: #313233;
+    color: rgb(167, 159, 159);
+    font-size: 1.1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+   }
+   
+   .text-body {
+    color: rgb(134, 134, 134);
+   }
+   
+   /*Text*/
+   .text-title {
+    /* font-size: 1.5em; */
+    font-weight: bold;
+    margin-top: 15px;
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: #4e5052;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card-button {
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
+   .foodImg{
+    width: 100%;
+   }
+  #c{
+    width: 40rem;
+    
+    height: 70vh;
+    border: 1px solid #a4a7a8;
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    background: #141414;
+    color :#a4a7a8;
+    font-size: 1rem;
+    position: fixed;
+    top: 50%;
+    right: 1%;
+    transform: translate(-50%,-50%);
+    text-align: left;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    transition: all 1s linear;
+
+  }
+  
+ 
+ @media only screen and (min-width: 300px) and (max-width:800px){
+body{
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+.progress-loader{
+  display: none !important;
+  width: 0;
+  background-color: transparent;
+  color: transparent;
+}
+.progress{
+  display: none;
+}
+.col-sm-6{
+  text-align: center;
+  /* margin-left: -15px; */
+}
+.card{
+  width: 100%;
+ height: 300px;
+ margin: 16px 1px;
+ /* margin-bottom: .8rem; */
+}
+.container{
+width: 70%;
+margin: auto;
+}
+#c{
+  height: 70vh;
+  width:70%;
+  position: fixed;
+  top: 50%;
+  right: -20%;
+ 
+}
+.form-control input{
+  padding: 0;
+  font-size: 14px;
+}
+.form-control input label{
+  font-size: 13px;
+}
+h1{
+  margin-top: 40px;
+  font-size: 50px;
+  text-align: center;
+  padding: 40px 5px;
+}
+.title-text{
+  font-size:20px
+}
+.form-control label span{
+  font-size: 14px;
+}
+.form-control input:focus+label span,
+  .form-control input:valid+label span {
+    font-size: 14px;
+  }
+ }
+ @media only screen and (min-width: 884px) and (max-width:1104px){
+  .card{
+    width: 100%;
+    margin: 15px 0 15px 0;
+    height: 280px;
+  }
+  h1{
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .searh-result input{
+    padding: 0;
+  }
+  #c{
+    right: -22.5%;
+    height: 70vh;
+    border: #a4a7a8 2px solid;
+  }
+ }
+
+ /*loading*/
+ .progress-loader {
+  /* margin-top: 1px; */
+  top: 55%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  background: rgba(236, 236, 238, 0.253);
+  height: 10px;
+  border-radius: 7px;
+  /* margin-bottom: 20px; */
+}
+
+.progress {
+  width: 1px;
+  height: 10px;
+  border-radius: 7px;
+  background: rgb(255, 255, 255);
+  transition: 0.5s;
+  animation: loading_44 5s cubic-bezier(.4,1.01,1,1) infinite;
+}
+
+@keyframes loading_44 {
+  0% {
+    width: 0%;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0%;
+  }
+}
+.progress-loader{
+  display: none;
+}
